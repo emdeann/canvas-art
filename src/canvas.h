@@ -11,7 +11,7 @@
 class Canvas : public AbstractGrid {
 private:
     std::string author;
-    std::vector<AbstractShape> shapes;
+    std::vector<std::shared_ptr<AbstractShape> > shapes;
 public:
     Canvas(int width, int height, std::string author);
     void draw() const;
