@@ -20,8 +20,8 @@ Rectangle::Rectangle(const Point& _topLeft, const Point& _bottomRight) {
         points.insert(points.end(), linePoints.begin(), linePoints.end());
     }
     
-    this -> width = abs(_topLeft.getX() - _bottomRight.getX());
-    this -> height = abs(_topLeft.getY() - _bottomRight.getY());
+    this -> width = abs(_topLeft.getX() - _bottomRight.getX()) + 1;
+    this -> height = abs(_topLeft.getY() - _bottomRight.getY()) + 1;
     
 }
 
