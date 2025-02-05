@@ -24,6 +24,18 @@ int main()
     canvas.draw();
     
     cout << "Paint needed: " << fixed << setprecision(1) << canvas.getPaintNeeded() << endl;
+
+    Canvas canvas2(CANVAS_SIZE, CANVAS_SIZE, "Dean & Katie");
+    canvas2.addShape(make_shared<Line>(Point(0, CANVAS_MAX_Y*0.25), Point(0, CANVAS_MAX_Y*0.75)));
+    canvas2.addShape(make_shared<Line>(Point(0, CANVAS_MAX_Y*0.5), Point(CANVAS_MAX_X*0.25, CANVAS_MAX_Y*0.5)));
+    canvas2.addShape(make_shared<Line>(Point(CANVAS_MAX_X*0.25, CANVAS_MAX_Y*0.25), Point(CANVAS_MAX_X*0.25, CANVAS_MAX_Y*0.75)));
+    canvas2.addShape(make_shared<Line>(Point(CANVAS_MAX_X*0.375, CANVAS_MAX_Y*0.25), Point(CANVAS_MAX_X*0.375, CANVAS_MAX_Y*0.5)));
+    canvas2.addShape(make_shared<Circle>(Point(CANVAS_MAX_X*0.375, CANVAS_MAX_Y*0.6), 2));
+    canvas2.addShape(make_shared<Line>(Point(CANVAS_MAX_X*0.5, CANVAS_MAX_Y*0.75), Point(CANVAS_MAX_X*0.5, CANVAS_MAX_Y*0.35)));
+    canvas2.addShape(make_shared<Circle>(Point(CANVAS_MAX_X*0.5, CANVAS_MAX_Y*0.28), 1));
+    canvas2.draw();
+
+    cout << "Paint needed: " << canvas2.getPaintNeeded() << endl;
     
     return 0;
 }
