@@ -1,5 +1,6 @@
 #include "circle.h"
-
+#define _USE_MATH_DEFINES
+#include <math.h>
 using namespace std;
 
 Circle::Circle(const Point& _center, int _radius) : 
@@ -7,7 +8,7 @@ Circle::Circle(const Point& _center, int _radius) :
 }
 
 float Circle::getArea() const {
-    return 3.14159 * radius * radius;
+    return M_PI * radius * radius;
 }
 
 const std::vector<Point> Circle::getPoints() const {
