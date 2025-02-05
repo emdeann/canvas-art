@@ -25,3 +25,13 @@ float Canvas::getPaintNeeded() const {
 
     return paintNeeded;
 }
+
+const vector<Point> Canvas::getPoints() const {
+    vector<Point> points;
+    for (AbstractShape s : shapes) {
+        vector<Point> shapePoints = s.getPoints();
+        points.insert(points.end(), shapePoints.begin(), shapePoints.end());
+    }
+
+    return points;
+}
