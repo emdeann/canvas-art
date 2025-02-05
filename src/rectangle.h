@@ -11,6 +11,7 @@ using namespace std;
 class Rectangle : public AbstractShape {
 private:
     vector<Line> lines;
+    vector<Point> points;
     int width;
     int height;
 public:
