@@ -25,7 +25,7 @@ const vector<Point> Line::getPoints() const {
 
     while (true) {
       
-      points.push_back(Point(x1, x2));
+      points.push_back(Point(x1, y1));
       
       if (x1 == x2 && y1 == y2) {
           break;
@@ -34,6 +34,6 @@ const vector<Point> Line::getPoints() const {
       if (e2 >= dy) { error += dy; x1 += sx; }
       if (e2 <= dx) { error += dx; y1 += sy; }
     }
-
+    
     return points;
 }
